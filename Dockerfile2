@@ -1,0 +1,10 @@
+FROM lambda_tester:latest
+# COPY /home/clintwn/.aws/credentials /mnt/app
+ENV AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
+ENV AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
+COPY requirements.txt /mnt/app/requirements.txt
+RUN pip3 install -r requirements.txt -t aws_layer/python --upgrade 
+COPY app.py /mnt/app/app.py
+COPY script.py /mnt/app/script.py
+CMD python3 script.py
+
