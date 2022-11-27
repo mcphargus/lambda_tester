@@ -12,7 +12,6 @@ c = s.client('s3')
 
 def lambda_handler(event,context={}):
     console.log('grabbing file list from s3://rowdy-videos')
-    #print('grabbing file list from s3://rowdy-videos')
     files = c.list_objects(Bucket='rowdy-videos')
     console.log('now we can make a table')
     table = Table(title='files n shiz')
