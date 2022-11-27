@@ -9,7 +9,6 @@ console = Console()
 s = boto3.Session()
 c = s.client('s3')
 
-
 def lambda_handler(event,context={}):
     console.log('grabbing file list from s3://rowdy-videos')
     files = c.list_objects(Bucket='rowdy-videos')
