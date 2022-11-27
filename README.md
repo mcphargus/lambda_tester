@@ -3,6 +3,7 @@
 This thing is rad!
 
 Borrowed heavily from https://adamnovotny.com/blog/serving-dynamic-web-pages-using-python-and-aws-lambda.html
+Adam, you rawk dude! Thanks for the helpful post!
 
 # usage
 
