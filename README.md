@@ -8,10 +8,19 @@ Borrowed heavily from https://adamnovotny.com/blog/serving-dynamic-web-pages-usi
 
 put credentials in your env, build and run. Easy peasy.
 
+```sh
+docker build . -t lambda_demo -f Dockerfile && \
+    docker run \
+    -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+    -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+    lambda_demo
+```
+
 # todo
 
 - add asciinema demo to README
 - stop getting distracted
-- fix this stupid soft_unicode markupsafe issue
+- find a yum proxy because this takes _way_ too long to build
+- ~~fix this stupid soft_unicode markupsafe issue~~ updated requirements.txt to not have versions
 
   `ImportError: cannot import name 'soft_unicode' from 'markupsafe' (/mnt/app/aws_layer/python/markupsafe/__init__.py)`
