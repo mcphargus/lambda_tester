@@ -8,9 +8,16 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 
+# @click.command()
+# def export_lambda_layer():
+#     """
+#         todo. This is going to be insecure and very gnarly. Just sayin'
+#         DON'T DO AS I DO, AND DON'T RUN THIS ANYWHERE IMPORTANT
+#     """
+#     pass
 
-from app import lambda_handler
+if __name__=='__main__':
+    from app import lambda_handler
+    event = {}
+    lambda_handler(event)
 
-event = {}
-
-lambda_handler(event)
