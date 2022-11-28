@@ -1,5 +1,4 @@
 import sys
-sys.path.append('/mnt/app/aws_layer/python')
 import jinja2
 import boto3
 from rich.console import Console

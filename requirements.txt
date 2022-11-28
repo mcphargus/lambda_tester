@@ -2,3 +2,4 @@ Jinja2
 boto3
 rich
 python-dotenv
+click

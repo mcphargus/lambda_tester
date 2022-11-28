@@ -1,8 +1,6 @@
 FROM amazonlinux:latest
-ENV AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
-ENV AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
-RUN yum update -y
-RUN yum install gcc gcc-c++ findutils zip -y
+# RUN yum update -y
+# RUN yum install gcc gcc-c++ findutils zip -y
 RUN amazon-linux-extras install python3.8
 RUN mkdir -p /mnt/app
 ADD . /mnt/app
