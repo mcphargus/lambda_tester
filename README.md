@@ -17,6 +17,32 @@ docker build . -t lambda_demo -f Dockerfile && \
     lambda_demo
 ```
 
+# configuration
+  todo
+
+# exporting lambda layers
+
+From [this gist](https://gist.github.com/mcphargus/bf78f28a4c22e42e6a2f72d813fe3c38)
+
+```sh
+# bogarted from https://stackoverflow.com/questions/58504350/install-a-package-in-aws-lambda
+pipenv --python 3.6
+pipenv shell
+. /home/clintwn/.local/share/virtualenvs/clintwn-UrrUtgNN/bin/activate
+pipenv install jinja2
+PY_DIR='build/python/lib/python3.9/site-packages'
+mkdir -p $PY_DIR
+pipenv lock -r > requirements.txt
+pip install -r requirements.txt --no-deps -t $PY_DIR
+cd build/
+zip -r ../jinja2_layer.zip .
+cd ..
+rm -r build/
+# now upload that sucker to the aws console under Lambda / Layers
+
+```
+
+
 # todo
 
 - add asciinema demo to README
