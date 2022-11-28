@@ -24,6 +24,8 @@ docker build . -t lambda_demo -f Dockerfile && \
 
 From [this gist](https://gist.github.com/mcphargus/bf78f28a4c22e42e6a2f72d813fe3c38)
 
+<script src="https://gist.github.com/mcphargus/bf78f28a4c22e42e6a2f72d813fe3c38.js"></script>
+
 ```sh
 # bogarted from https://stackoverflow.com/questions/58504350/install-a-package-in-aws-lambda
 pipenv --python 3.6
