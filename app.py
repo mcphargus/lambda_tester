@@ -1,13 +1,10 @@
-import sys
-sys.path.append('/mnt/app/aws_layer/python')
 import jinja2
 import boto3
 from rich.console import Console
 from rich.table import Table
 console = Console()
 
-s = boto3.Session()
-c = s.client('s3')
+c = boto3.client('s3')
 
 def lambda_handler(event,context={}):
     console.log('grabbing file list from s3://rowdy-videos')
