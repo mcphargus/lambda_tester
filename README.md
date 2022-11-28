@@ -42,7 +42,8 @@ rm -r build/
 
 # todo
 
-- add asciinema demo to README
+- ~~add asciinema demo to README~~
+  - https://asciinema.org/a/19ZWv7Y8DFv9mIBJmFJSik24i?startAt=30s
 - stop getting distracted
 - add lambda layer exporter
   - see https://gist.github.com/mcphargus/bf78f28a4c22e42e6a2f72d813fe3c38 for inspiration
