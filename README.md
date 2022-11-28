@@ -11,10 +11,7 @@ put credentials in your env, build and run. Easy peasy.
 
 ```sh
 docker build . -t lambda_demo -f Dockerfile && \
-    docker run \
-    -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
-    -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
-    lambda_demo
+    docker run --env-file creds.env lambda_demo
 ```
 
 # configuration

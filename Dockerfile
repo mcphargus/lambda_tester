@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
-ENV AWS_ACCESS_KEY $AWS_ACCESS_KEY
+ENV AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
 ENV AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
 RUN yum update -y
 RUN yum install gcc gcc-c++ findutils zip -y
