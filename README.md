@@ -39,7 +39,6 @@ rm -r build/
 
 ```
 
-
 # todo
 
 - ~~add asciinema demo to README~~
