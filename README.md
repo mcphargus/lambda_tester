@@ -22,6 +22,7 @@ docker build . -t lambda_demo -f Dockerfile && \
 - add asciinema demo to README
 - stop getting distracted
 - add lambda layer exporter
+- ~~start using gitflow~~
 - find a yum proxy because this takes _way_ too long to build
 - ~~fix this stupid soft_unicode markupsafe issue~~ updated requirements.txt to not have versions
 
