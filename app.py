@@ -26,3 +26,7 @@ def lambda_handler(event,context={}):
         table.add_row(k,mdt.isoformat(),et,str(size))
     console.log(table)
     console.log("^^ there's your table")
+    return {
+        'statusCode':200,
+        'body': 'done'
+    }
