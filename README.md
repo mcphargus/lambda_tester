@@ -7,15 +7,18 @@ Adam, you rawk dude! Thanks for the helpful post!
 
 # usage
 
-put credentials in your env, build and run. Easy peasy.
+put credentials in your .env, build and run. Easy peasy.
 
 ```sh
-docker build . -t lambda_demo -f Dockerfile && \
-    docker run --env-file creds.env lambda_demo
+buildopts=$1
+docker build . -t lambda_demo -f Dockerfile $buildopts && \
+    docker run --env-file .env lambda_demo
 ```
 
 # configuration
-  todo
+  ~~todo~~ done. yay dotenv, and yay for me being better at it.
+
+  flippin' python pathing issues drove me nuts for awhile though.
 
 # exporting lambda layers
 
@@ -44,11 +47,15 @@ rm -r build/
 - ~~add asciinema demo to README~~
   - https://asciinema.org/a/19ZWv7Y8DFv9mIBJmFJSik24i?startAt=30s
 - stop getting distracted
+  - *my brain* NEVA!
+  - SPEAKING OF DISTRACTIONS, it would be cool if I could update the readme automatically from the contents of  [build.sh](build.sh)
+  - or, like, idk, use a real documentation system.
 - add lambda layer exporter
   - see https://gist.github.com/mcphargus/bf78f28a4c22e42e6a2f72d813fe3c38 for inspiration
 - ~~start using github issues~~
 - ~~start using gitflow~~
-- find a yum proxy because this takes _way_ too long to build
+- ~~find a yum proxy because this takes _way_ too long to build~~
+  - skipping for now. I don't really think I need all the build-essential hooeey I was using before. Bye chaff.
 - ~~fix this stupid soft_unicode markupsafe issue~~ updated requirements.txt to not have versions
 
   `ImportError: cannot import name 'soft_unicode' from 'markupsafe' (/mnt/app/aws_layer/python/markupsafe/__init__.py)`
