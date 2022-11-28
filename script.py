@@ -1,20 +1,21 @@
 import sys, os
-if os.environ.get('IN_DOCKER'):
-    sys.path.append('/mnt/app/aws_layer')
-    sys.path.append('/mnt/app/aws_layer/python')
-
-import click
+sys.path.append('/mnt/app/aws_layer')
+sys.path.append('/mnt/app/aws_layer/python')
 from dotenv import load_dotenv
+import click
+
 load_dotenv()
 import os
 
-# @click.command()
-# def export_lambda_layer():
-#     """
-#         todo. This is going to be insecure and very gnarly. Just sayin'
-#         DON'T DO AS I DO, AND DON'T RUN THIS ANYWHERE IMPORTANT
-#     """
-#     pass
+@click.command()
+def export_lambda_layer():
+    """
+        todo
+        think think think.
+        we're creating a good working layer in the dockerfile build.
+        what's the best way to get it out?
+    """
+    pass
 
 if __name__=='__main__':
     from app import lambda_handler
